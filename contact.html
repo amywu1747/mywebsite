@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | PRDS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero small-hero">
+      <nav class="top-nav">
+        <a href="index.html" class="brand">PRDS</a>
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">About Us <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="story.html">Our Story</a>
+              <a href="ethos.html">Our Ethos</a>
+            </div>
+          </div>
+          <a href="services.html">Our Team</a>
+          <a href="contact.html">What We Do</a>
+        </div>
+      </nav>
+
+      <div class="page-content">
+        <h1>What We Do</h1>
+        <p class="page-subtitle">Publications and Data Sets</p>
+
+        <div class="datasets-section">
+          <div class="datasets-grid">
+            <div class="dataset-item">
+              <h3>Admission Discharge Transfer (ADT)</h3>
+              <p>Patient transfers and location within hospital</p>
+              <p class="dataset-date">Earliest data: February 1, 2020</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Alberta Continuing Care Information System (ACCIS)</h3>
+              <p>Continuing care stays including long-term care (LTC), designated supportive living (DSL) and home-living (HL)</p>
+              <p class="dataset-date">Earliest data: January 1, 2012</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Connect Care</h3>
+              <p>Connect Care is the provincial electronic medical record.</p>
+              <p class="dataset-date">Earliest data: November 3, 2019</p>
+            </div>
+            <div class="dataset-item">
+              <h3>COVID-19 Data (CDOM and PROVLAB)</h3>
+              <p>PROVLAB captures COVID testing data in Alberta while CDOM captures public health assessments and contact tracing.</p>
+              <p class="dataset-date">Earliest data: February 1, 2020</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Diagnostic Imaging</h3>
+              <p>Diagnostic images performed in AHS hospital based facilities</p>
+              <p class="dataset-date">Earliest data: January 1, 2011</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Discharge Abstract Database (DAD)</h3>
+              <p>Acute care inpatient hospitalizations in Alberta</p>
+              <p class="dataset-date">Earliest data: April 1, 2002</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Emergency Department Information System (EDIS)</h3>
+              <p>Ambulatory encounters in Alberta, including emergency department, same-day surgery, and day procedures.</p>
+              <p class="dataset-date">Earliest data: April 1, 2010</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Laboratory</h3>
+              <p>All AHS general lab tests including clinical chemistry, toxicology, hematology, serology, urinalysis and immunology.</p>
+              <p class="dataset-date">Earliest data: April 1, 2012</p>
+            </div>
+            <div class="dataset-item">
+              <h3>National Ambulatory Care Reporting System (NACRS)</h3>
+              <p>Ambulatory encounters in Alberta, including emergency department, same-day surgery, and day procedures.</p>
+              <p class="dataset-date">Earliest data: April 1, 2002</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Pharmaceutical Information Network (PIN)</h3>
+              <p>Prescription drugs dispensed from most community pharmacies in Alberta.</p>
+              <p class="dataset-date">Earliest data: April 1, 2008</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Practitioner Claims</h3>
+              <p>Health service claims submitted for payment by providers in Alberta under the Alberta Health Care Insurance Plan.</p>
+              <p class="dataset-date">Earliest data: April 1, 1994</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Provincial Registry</h3>
+              <p>Identifies whether people have coverage with Alberta Health Care Insurance Plan (AHCIP) and can be used to identify deaths for Alberta residents.</p>
+              <p class="dataset-date">Earliest data: April 1, 1994</p>
+            </div>
+            <div class="dataset-item">
+              <h3>Vital Statistics</h3>
+              <p>Identifies dates of death for Alberta residents</p>
+              <p class="dataset-date">Earliest data: January 1, 1999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const navDropdowns = document.querySelectorAll('.nav-dropdown');
+      let closeTimeout;
+
+      navDropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', () => {
+          clearTimeout(closeTimeout);
+          dropdown.classList.add('open');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+          closeTimeout = setTimeout(() => {
+            dropdown.classList.remove('open');
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>
