@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story | PRDS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero small-hero">
+      <nav class="top-nav">
+        <div>
+          <a href="index.html" class="brand">PRDS</a>
+          <p class="brand-full">Provincial Research Data Services</p>
+        </div>
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">About Us <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="story.html">Our Story</a>
+              <a href="ethos.html">Our Ethos</a>
+            </div>
+          </div>
+          <a href="services.html">Our Team</a>
+          <a href="contact.html">What We Do</a>
+        </div>
+      </nav>
+
+      <div class="page-content">
+        <h1>Our Story</h1>
+        <p>
+          Add your organization's story here. Share the journey, mission, and values that guide your work in research and healthcare data services.
+        </p>
+      </div>
+    </header>
+
+    <script>
+      const navDropdowns = document.querySelectorAll('.nav-dropdown');
+      let closeTimeout;
+
+      navDropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', () => {
+          clearTimeout(closeTimeout);
+          dropdown.classList.add('open');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+          closeTimeout = setTimeout(() => {
+            dropdown.classList.remove('open');
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>
